@@ -97,10 +97,11 @@ with open('sentimentAnalysis_model_max.pkl', 'rb') as model_file:
     # Call load method to deserialze
     NbClfTfIdf = pickle.load(model_file)
 
-
+#
 # Build App
+
 st.title("Food review sentiment analysis")
-st.header("Find out percentage of Positive,Neutral and Negative reviews of your product")
+st.header("Find out percentage of Positive,Neutral and Negative reviews")
 st.write("")
 st.write("")
 st.write("")
