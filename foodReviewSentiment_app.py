@@ -101,8 +101,7 @@ with open('sentimentAnalysis_model_max.pkl', 'rb') as model_file:
 # Build App
 
 st.title("Food review sentiment analysis")
-st.header("Find out percentage of Positive,Neutral and Negative reviews")
-st.write("")
+
 st.write("")
 st.write("")
 st.write("")
@@ -120,12 +119,14 @@ if st.button("Check Review",key="single"):
       st.warning("Neutral Review")
     else:
       st.error("Negative Review") 
-     
+
+    
 st.write("")
 st.write("")
 st.write("")
 st.write("")
 st.subheader("Analyze multiple reviews")
+st.write("Find out percentage of Positive,Neutral and Negative reviews")
 sentiment_summary = []
 
 files = st.file_uploader("Choose a text file or multiple text files.",accept_multiple_files=True)
