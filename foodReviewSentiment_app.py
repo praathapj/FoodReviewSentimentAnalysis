@@ -7,6 +7,8 @@ from bs4 import BeautifulSoup
 from io import StringIO
 import numpy as np
 import pickle
+import nltk
+nltk.download('punkt')
 
 #from ipynb.fs.full.FoodReviewSentimentAnalysis import preprocess_review
 
