@@ -1,4 +1,6 @@
 import streamlit as st
+import nltk
+nltk.download('punkt')
 import pandas as pd
 from nltk.stem import SnowballStemmer
 from nltk.tokenize import word_tokenize
@@ -7,8 +9,7 @@ from bs4 import BeautifulSoup
 from io import StringIO
 import numpy as np
 import pickle
-import nltk
-nltk.download('punkt')
+
 
 #from ipynb.fs.full.FoodReviewSentimentAnalysis import preprocess_review
 
@@ -104,7 +105,6 @@ st.title("Food review sentiment analysis")
 
 st.write("")
 st.write("")
-st.write("")
 
 st.subheader("Analyze single review")
 direct = st.text_input("Write review to know the sentiment")
@@ -120,9 +120,7 @@ if st.button("Check Review",key="single"):
     else:
       st.error("Negative Review") 
 
-    
-st.write("")
-st.write("")
+
 st.write("")
 st.write("")
 st.subheader("Analyze multiple reviews")
@@ -156,7 +154,7 @@ if st.button("Check Review",key="multiple"):
   col1.metric("Positive", "{}%".format(pos_percent*100))
   col2.metric("Neutral", "{}%".format(neu_percent*100))
   col3.metric("Negative", "{}%".format(neg_percent*100))
-st.write(" ")
+
 st.write(" ")
 st.write(" ")
 st.write(" ")
