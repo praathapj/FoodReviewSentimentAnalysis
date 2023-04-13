@@ -156,9 +156,7 @@ if st.button("Check Review",key="multiple"):
   col3.metric("Negative", "{}%".format(neg_percent*100))
 
 st.write(" ")
-st.write(" ")
-st.write(" ")
-st.subheader("Click for more information")
+st.write("Click for more information")
 # Source: https://stackoverflow.com/questions/74003574/how-to-create-a-button-with-hyperlink-in-streamlit
 url = 'https://github.com/praathapj/FoodReviewSentimentAnalysis'
 
